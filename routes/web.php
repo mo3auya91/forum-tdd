@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\web\ThreadsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/threads', [ThreadsController::class, 'index'])->name('threads.index');
+Route::get('/threads/{thread}', [ThreadsController::class, 'show'])->name('threads.show');

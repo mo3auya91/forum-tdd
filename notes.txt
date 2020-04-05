@@ -1,2 +1,8 @@
 # form
 
+1. Thread
+1. Reply
+1. User
+
+A. A thread created by user
+B. A reply belongs to a thread, abd belongs to a user
